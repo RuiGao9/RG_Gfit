@@ -1,8 +1,8 @@
-def gfit_Nieto(true,pred,residual='Yes'):
+def RG_Gfit(true,pred,residual='Yes'):
     import numpy as np
     import pylab
     import matplotlib.pyplot as plt
-    import sklearn
+    import sklearn.metrics
     import math
     import statistics
     from scipy.stats import pearsonr
@@ -60,4 +60,4 @@ def gfit_Nieto(true,pred,residual='Yes'):
     print('Pearsons correlation: %.3f' % r)
     print('Willmott\'s index of agreement: %.3f' % d)
     
-    return(n,mse,rmse,bias,corr,d)
+    return(n,mse,rmse,bias,r,d)
