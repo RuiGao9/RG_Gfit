@@ -51,7 +51,7 @@ def RG_Gfit(true,pred,residual='Yes'):
     tmp_1 = (true-pred)**2
     tmp_1 = tmp_1.sum()
     tmp_2 = true.mean()
-    tmp_2 = ((true-tmp_2)+(pred-tmp_2))**2
+    tmp_2 = (np.abs(true-tmp_2)+np.abs(pred-tmp_2))**2
     d = 1-(tmp_1/tmp_2.sum())
     
     print('Number of cases: %.0f' % n)
