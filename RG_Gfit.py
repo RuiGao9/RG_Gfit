@@ -59,5 +59,6 @@ def RG_Gfit(true,pred,residual='Yes'):
     print('Bias: %.3f' % bias)
     print('Pearsons correlation: %.3f' % r)
     print('Willmott\'s index of agreement: %.3f' % d)
+    print('Mean square error: %.3f' % mse)
     
     return(n,mse,rmse,bias,r,d)
